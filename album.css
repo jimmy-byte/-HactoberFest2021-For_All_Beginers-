@@ -6,8 +6,8 @@
 }
 @media (min-width: 768px) {
   .jumbotron {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
   }
 }
 
@@ -29,5 +29,5 @@ footer {
 }
 
 footer p {
-  margin-bottom: .25rem;
+  margin-bottom: .26rem;
 }
