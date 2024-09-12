@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SATI Fitness</title>
+
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Balthazar&display=swap" rel="stylesheet">
+<style>
+    body {
+        font-family: 'Balthazar', serif;
+        color: white;
+        margin: 0px;
+        padding: 0px;
+        background: url('img/bg.png');
+        background-size: cover;
+    }
+    .left {
+    position: absolute;
+    left: 35px;
+    top: 20px;
+    display: inline-block;
+    /* border: 2px solid red; */
+    text-align: center;
+    font-size: 27px;
+    line-height: 20px;
+
+
+}
+
+.mid {
+    display: block;
+    width: 37%;
+    margin: 20px auto;
+    /* border: 2px solid green; */
+    padding: 0px 22px;
+
+}
+
+.right {
+    position: absolute;
+    right: 34px;
+    top: 30px;
+
+    display: inline-block;
+    /* border: 2px solid yellow; */
+}
+
+.navbar{
+   
+    display: inline-block;
+    padding: 0px 2px;
+} 
+.navbar li{
+    
+    display: inline-block;
+    font-size: 23px;
+}
+.navbar li a{
+    color: white;
+    text-decoration: none;
+    padding: 0px 10px;
+    
+}
+.navbar li a:hover, .navbar li a.active{
+    color: rgb(235, 195, 215);
+    text-decoration: underline;
+   
+}
+.left img{
+    width: 100px;
+    margin: 20px;
+    filter: invert(100%);
+
+}
+.btn{
+    margin: 0px 9px;
+    color: white;
+    background-color: black;
+    padding: 4px 16px;
+    border: 2px solid rgb(247, 199, 199);
+    border-radius: 9px;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: 'Balthazar', serif;
+}
+.btn:hover{
+    background-color: rgb(90, 75, 57);
+}
+.container{
+    border: 2px solid green;
+    margin: 116px 104px;
+    padding: 23px 38px;
+    width: 33%;
+    border-radius: 16px;
+    border-color: white;
+    
+}
+.form input{
+    text-align: center;
+    display: block;
+    width: 342px;
+    padding: 6px;
+    border: 2px solid black;
+    margin: 3px auto;
+    font-size: 20px;
+    border-radius: 16px;
+}
+.container button{
+    display: block;
+    width: 86%;
+    margin:7px auto;
+    border-color: white;
+
+}
+</style>
+
+<body>
+    <header class="header">
+        <!-- left box for logo -->
+        <div class="left">
+            <img src="img/ok.jpeg" alt="">
+            <div>SATI Fitness</div>
+        </div>
+        <!-- mid box for navbar -->
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Fitness Calculator</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </div>
+        <!-- rigt box for button -->
+        <div class="right">
+            <button class="btn">Schedules </button>
+            <button class="btn"> Pricing</button>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Join the best gym of Vidisha now</h1>
+        <form action="No action.php">
+            <div class="form">
+                <input type="text" name="" placeholder="Enter your Name">
+            </div>
+            <div class="form">
+                <input type="text" name="" placeholder="Enter your Age">
+            </div>
+            <div class="form">
+                <input type="text" name="" placeholder="Enter your Gender">
+            </div>
+            <button class="btn">Submit</button>
+
+        </form>
+
+    </div>
+</body>
+
+</html>
