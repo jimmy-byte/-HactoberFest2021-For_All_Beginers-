@@ -1,0 +1,176 @@
+<html>
+<head><title>Tip Calculator</title>
+<style type="text/css">
+    #screen{
+	    width:1340px;
+		height:720px;
+		background-color:green;
+		}
+	#outline{
+	    width:28%;
+		height:80%;
+		border-radius:5%;
+		background-color:white;
+		margin:0 auto;
+        position:relative;
+		top:20px;
+		}
+	#top-head{
+	    height:40px;
+		border-radius:5%;
+		background-color:black;
+		}
+	.main-head{
+	    position:relative;
+		top:5px;
+		left:8px;
+		font-size:25px;
+		color:white;
+		font-weight:bold;
+		}
+	#style{
+	    margin-left:50px;
+		margin-top:30px;
+		}
+	#style2{
+	    margin-left:50px;
+		margin-top:20px;
+		}
+	#bill{
+	    height:30px;
+		position:relative;
+		bottom:4px;
+		border:2px solid blue;
+		font-weight:bold;
+		font-size:15px;
+		}
+	#tip{
+        height:30px;
+		position:relative;
+		bottom:1px;
+		border:2px solid blue;
+		font-weight:bold;
+		font-size:15px;
+        }		
+    #style0{
+	    margin-left:90px;
+		font-weight:bold;
+		color:red;
+		font-size:30px;
+		transition:1.75s;
+		}
+	#style3{
+	    margin-left:60px;
+		font-weight:bold;
+		color:brown;
+		font-size:20px;
+		}
+	#person{
+	    margin-left:30px;
+		height:30px;
+		width:200px;
+		position:relative;
+		top:2px;
+		bottom:2px;
+		border:2px solid blue;
+		font-weight:bold;
+		}
+	#clickit{
+	    margin-left:140px;
+		height:35px;
+		width:87px;
+		background-color:yellow;
+		font-weight:bold;
+		font-size:15px;
+		border:2px solid grey;
+		border-radius:15%;
+		}
+	#totalTip{
+	    font-size:30px;
+		font-weight:bold;
+		text-align:center;
+		}
+	#totalTip:before{
+	    content:"Everyone have to pay";
+		font-size:25px;
+		font-weight:bold;
+		display:block;
+		}
+	    
+	    
+
+</style>
+</head>
+<body>
+<div id="screen">
+<div id="outline">
+<div id="top-head"><span class="main-head">Tip Calculator</span></div>
+<p id="style0">
+WELCOME!
+</p>
+<p id="style">
+<span style="font-size:20px;color:brown;font-weight:bold">How much was your bill?</span>
+<br>
+<span style="font-size:25px">Bill:</span><input type="text" id="bill" value placeholder="Enter Amount">
+</p>
+<p id="style2">
+<span style="font-size:20px;color:purple;font-weight:bold">How much you satisfied by service?</span>
+<br>
+<span style="font-size:25px">Tip:</span><input type="text" id="tip" value placeholder="%">
+</p>
+<p id="style3">
+Enter the number of friends.<br>
+<span><input type="text" id="person" value placeholder="Peoples"></span>
+</p>
+<button id="clickit">Continue!</button>
+<br>
+<p id="totalTip">
+Rs.<span id="tip2">0.00</span>
+</p>
+<script type="text/javascript">
+var blink = document.getElementById("style0");
+setInterval(function(){
+   blink.style.opacity = (blink.style.opacity == 0?1:0);
+   },500);
+
+document.getElementById("totalTip").style.display = "none";
+
+document.getElementById("clickit").onclick = function(){
+  var amount = document.getElementById("bill").value;
+  
+  var tipAmount = document.getElementById("tip").value;
+  
+  var peoples = document.getElementById("person").value;
+  
+  if(!amount){
+    alert("Please enter your bill");
+	}
+	
+  else if(!tipAmount){
+	alert("please enter tip");
+    }
+	
+  else if(!peoples){
+    alert("please enter your friends!");
+    }
+	
+  else{	
+
+    var tipCalculation = (amount*tipAmount)/100;
+  
+    var total = parseInt(tipCalculation) + parseInt(amount);
+  
+    var result = (total)/peoples;
+  
+    result = Math.round(result);
+  
+    document.getElementById("totalTip").style.display = "block";
+    document.getElementById("tip2").innerHTML = result;
+    }
+}
+</script>
+</div>
+</div>
+
+</body>
+</html>
