@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+void maxcon(int arr[],int n,int m)
+{
+   // code here
+        int flip=0;
+        int i=0;
+        int j=0;
+        int ans=0;
+        while(i<n)
+        {
+            if(arr[i]==0)
+            {
+                flip++;
+            }
+            while(flip>m)
+            {
+                if(arr[j]==0)
+                flip--;
+                j++;
+            }
+            ans=max(ans,i-j+1);
+            i++;
+        }
+}
+int main()
+{
+    int arr[]={1,1,0,1,0,0,1,1,1,1,0};
+    int n=sizeof(arr)/sizeof(arr[0]);
+    int m=2;
+    maxcon(arr,n,m);
+}
