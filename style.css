@@ -1,0 +1,21 @@
+body{
+    background-color: blueviolet;
+}
+h2{
+    text-align: center;
+}
+.container{
+    width: 250px;
+    height: 250px;
+    padding: 65 70px;
+    border-radius: 30px;
+    border: 5px solid white;
+    position: relative;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: -100px;
+    background-color:grey;
+    border-color: black;
+
+}
