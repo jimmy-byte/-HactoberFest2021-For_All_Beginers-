@@ -1,6 +1,6 @@
 
 
-<h1 align="center"> HactoberFest2020-For_All_Beginers </h1>
+<h1 align="center"> HactoberFest2022-For_All_Beginers </h1>
 
 ***
 
@@ -19,7 +19,7 @@ To earn your Hacktoberfest tee or tree reward, you must register and make four v
 
 <h3 align="center">
     <a href="https://hacktoberfest.digitalocean.com/">
-        Link To HacktoberFest 2020
+        Link To HacktoberFest 2022
     </a>
 </h3>
 
