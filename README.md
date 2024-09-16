@@ -1,6 +1,6 @@
 
 
-<h1 align="center"> HactoberFest2020-For_All_Beginers </h1>
+<h1 align="center"> HactoberFest2022-For_All_Beginers </h1>
 
 ***
 
@@ -38,7 +38,7 @@ To earn your Hacktoberfest tee or tree reward, you must register and make four v
 ## Rules To Contribute To This Repo
 
 -   Use any language.
--   C, C++, JAVA, Data Structure and Algorithms, HTML, CSS.
+-   C, C++, JAVA, Data Structure and Algorithms, HTML, CSS,Python.
 -   Anything valuable.
 
 ## Steps For Contribution
@@ -48,7 +48,14 @@ To earn your Hacktoberfest tee or tree reward, you must register and make four v
     3. Add a file
     4. commit the code
     5. Make pull request
+
+## How to create issues
+1. Go to th issues tab.
+2. Click on new issue.
+3. Describe the issue.
+4. Click on submit new issue
 ***
+
 <h2 align="center">
     <p>
         Thank You
