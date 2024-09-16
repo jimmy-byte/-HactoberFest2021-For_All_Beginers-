@@ -59,10 +59,10 @@ void mergeSort(int array[], int const begin, int const end)
     if (begin >= end)
         return; // Returns recursively
   
-    auto mid = begin + (end - begin) / 2;
-    mergeSort(array, begin, mid);
-    mergeSort(array, mid + 1, end);
-    merge(array, begin, mid, end);
+    auto mid1 = begin + (end - begin) / 2;
+    mergeSort(array, begin, mid1);
+    mergeSort(array, mid1 + 1, end);
+    merge(array, begin, mid1, end);
 }
   
 // UTILITY FUNCTIONS
