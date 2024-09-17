@@ -1,0 +1,71 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(https://i.redd.it/128uj78z58m01.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+}
+.image-container{
+    background-color: black;
+}
+img{
+    opacity: 0.2;
+}
+.login-page{
+    width: 360px;
+    height: 460px;
+    padding: 10% 0 0;
+    margin: auto;
+}
+.form{
+    position: relative;
+    z-index: 1;
+    background-color: rgba(0.2,0.2,0.2,0.7);
+    max-width: 0 auto 100px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+}
+.form input{
+    font-family: "Roboto", sans-serif;
+    outline: 1;
+    background: gainsboro;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.form button{
+    font-family: "Robot0", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: red;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+}
+.form button:hover,.form button:active{
+    background: #ff000f;
+}
+.form .massage{
+    margin: 15px 0 0;
+    color: aliceblue;
+    text-decoration-color: aliceblue;
+    font-size: medium;
+}
+.form .massage a{
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: large;
+}
+h2{
+    text-align: center;
+    color: white;
+}
+
