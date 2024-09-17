@@ -1,3 +1,8 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .jumbotron {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -30,4 +35,66 @@ footer {
 
 footer p {
   margin-bottom: .25rem;
+}
+
+/* styling for about.html file */
+.description {
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: black;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.about {
+  width: 100%;
+  color: aqua;
+  padding-left: 20px;
+  text-align: center;
+}
+
+.about h1{
+  font-size: 70px;
+  color: sandybrown;
+}
+
+.about p {
+  font-size: 30px;
+}
+
+.about h2{
+  font-size: 40px;
+  color: sandybrown;
+}
+
+.about ul {
+  text-align: left;
+}
+
+.about ul li {
+  list-style: none;
+  font-size: 30px;
+}
+
+.skills{
+  width: 100%;
+  color: aqua;
+  margin-left: 40px;
+}
+
+.skills h3 {
+  font-size: 35px;
+  color: sandybrown;
+}
+
+.skills ul {
+  text-align: left;
+}
+
+.skills ul li {
+  list-style: none;
+  font-size: 30px;
 }
