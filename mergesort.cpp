@@ -26,28 +26,24 @@ void merge(int array[], int const left, int const mid, int const right)
     // Merge the temp arrays back into array[left..right]
     while (indexOfSubArrayOne < subArrayOne && indexOfSubArrayTwo < subArrayTwo) {
         if (leftArray[indexOfSubArrayOne] <= rightArray[indexOfSubArrayTwo]) {
-            array[indexOfMergedArray] = leftArray[indexOfSubArrayOne];
-            indexOfSubArrayOne++;
+            array[indexOfMergedArray++] = leftArray[indexOfSubArrayOne++];
+            
         }
         else {
-            array[indexOfMergedArray] = rightArray[indexOfSubArrayTwo];
-            indexOfSubArrayTwo++;
+            array[indexOfMergedArray++] = rightArray[indexOfSubArrayTwo++];
+            
         }
-        indexOfMergedArray++;
+       
     }
     // Copy the remaining elements of
     // left[], if there are any
     while (indexOfSubArrayOne < subArrayOne) {
-        array[indexOfMergedArray] = leftArray[indexOfSubArrayOne];
-        indexOfSubArrayOne++;
-        indexOfMergedArray++;
+        array[indexOfMergedArray++] = leftArray[indexOfSubArrayOne++];
     }
     // Copy the remaining elements of
     // right[], if there are any
     while (indexOfSubArrayTwo < subArrayTwo) {
-        array[indexOfMergedArray] = rightArray[indexOfSubArrayTwo];
-        indexOfSubArrayTwo++;
-        indexOfMergedArray++;
+        array[indexOfMergedArray++] = rightArray[indexOfSubArrayTwo++];
     }
 }
   
@@ -76,7 +72,7 @@ void printArray(int A[], int size)
 // Driver code
 int main()
 {
-    int arr[] = { 12, 11, 13, 5, 6, 7 };
+    int arr[] = { 12, 11, 13, 5, 6, 7};
     auto arr_size = sizeof(arr) / sizeof(arr[0]);
   
     cout << "Given array is \n";
