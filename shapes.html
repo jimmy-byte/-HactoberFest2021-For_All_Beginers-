@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shapes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .hex1 {
+            width: 100px;
+            height: 58px;
+            background: #fff;
+            position: relative;
+            margin: 30px;
+        }
+
+        .hex2 {
+            width: 100px;
+            height: 80px;
+            background: #fff;
+            position: relative;
+            margin: 30px;
+        }
+
+        .hex3 {
+            width: 100px;
+            height: 38px;
+            background: #fff;
+            position: relative;
+            margin: 30px;
+        }
+
+        .hex1::before,
+        .hex2::before,
+        .hex3::before {
+            content: "";
+            width: inherit;
+            height: inherit;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #fff;
+            transform: rotate(60deg);
+        }
+
+        .hex1::after,
+        .hex2::after,
+        .hex3::after {
+            content: "";
+            width: inherit;
+            height: inherit;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #fff;
+            transform: rotate(-60deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hex1"></div>
+    <div class="hex2"></div>
+    <div class="hex3"></div>
+</body>
+
+</html>
