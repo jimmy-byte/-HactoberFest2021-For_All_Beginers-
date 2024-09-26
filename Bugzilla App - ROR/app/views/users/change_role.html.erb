@@ -1,0 +1,49 @@
+<% if current_user.role != 0 %>
+<% controller.redirect_to root_path %>
+
+<% else %>
+<% provide(:title, "Roles") %>
+<!Doctype html>
+<html>
+<head>
+    <title><%= yield(:title) %></title>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-md-offset-3">
+                    <div>
+                        <h2 class="text-center">Roles</h2>
+                        <table class="table table-responsive-sm">
+                            <tr class="thead-dark">
+                                <th>Name</th>
+                                <th>Role</th>
+                                <th></th>
+                            </tr>
+                            <% @users_all.each do |u| %>
+                                <% if u.role != 0 %>
+                                <tr>
+                                    <td><%= u.name %></td>
+                                    <td>
+                                        <% if u.role == 1 %>
+                                        QA
+                                        <% end %>
+                                        <% if u.role == 2 %>
+                                        Developer
+                                        <% end %>
+                                    </td>
+                                    <% if current_user.role == 0 %>
+                                    <td><%= link_to "Change Role", edit_user_path(u), class: "btn btn-secondary" %></td>
+                                    <% end %>
+                                </tr>
+                                <% end %>
+                            <% end %>
+                        </table>
+    
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<% end %>

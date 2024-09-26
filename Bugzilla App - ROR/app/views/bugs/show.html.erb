@@ -1,0 +1,24 @@
+<% provide(:title, "Assign Bug") %>
+<!Doctype html>
+<html>
+    <head><title><%= yield(:title) %></title></head>
+    <body>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-md-offset-3">
+                    <h2 class="text-center">Assign Bug</h2>
+                    <%= form_with(model: @bug, local:true) do |f| %>
+        
+                        <%= f.label :assign_to %>    
+                        <div>
+                        <%= f.select :assigned_to, @users %>
+                        </div>
+                        <%= f.submit "Assign", class: "btn btn-primary form-control mt-3" %>
+
+                    <% end %>
+                    <%= link_to 'Back', bugs_path , class: "btn btn-secondary form-control mt-3" %>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

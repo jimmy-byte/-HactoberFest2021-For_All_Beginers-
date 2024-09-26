@@ -1,0 +1,30 @@
+<% if current_user.role != 0 %>
+<% controller.redirect_to root_path %>
+<% else %>
+<% provide(:title, "Change Role") %>
+<!Doctype html>
+<html>
+<head>
+    <title><%= yield(:title) %></title>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-md-offset-3">
+                    <div>
+                    <%= form_with(model: @user, local:true) do |f| %>
+
+                        <%= f.label :change_to %>    
+                        <%= f.select(:role, options_for_select([['QA', 1], ['Developer', 2],]), {}, {class: "form-control mb-2"}) %>
+                        
+                        <%= f.submit "Update", class: "btn btn-primary form-control mt-3" %>
+                    
+                    <% end %>
+                    <%= link_to 'Back', change_role_path , class: "btn btn-secondary form-control mt-3" %>
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<% end %>

@@ -1,0 +1,23 @@
+<% provide(:title, "Update Status") %>
+<!Doctype html>
+<html>
+    <head><title><%= yield(:title) %></title></head>
+    <body>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-md-offset-3">
+                    <h2 class="text-center">Edit Status</h2>
+                    <%= form_with(model: @bug, local:true) do |f| %>
+        
+                        <%= f.label :status %>    
+                        <%= f.select(:status, options_for_select([['Not Started', 'Not Started'], ['Started', 'Started'], ['Fixed', 'Fixed'], ['Not Fixed', 'Not Fixed']]), {}, {class: "form-control mb-2"}) %>
+                        
+                        <%= f.submit "Update", class: "btn btn-primary form-control mt-3" %>
+                    
+                    <% end %>
+                    <%= link_to 'Back', bugs_path , class: "btn btn-secondary form-control mt-3" %>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<header>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top navbar-inverse">
+        <%= link_to "Bugzilla App", root_path, class: "navbar-brand" %>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+            <%= link_to "Home", root_path, class: "nav-link pr-5" %>
+            </li>
+
+            <% if logged_in? %>
+
+            <% if current_user.role == 0 %>
+                <%= link_to "Roles", change_role_path, class: "nav-link pr-5" %>
+            <% end %>
+            
+            <% if current_user.role == 0 or current_user.role == 1 %>
+            <li class="nav-item">
+            <%= link_to "Create Bug", new_bug_path, class: "nav-link pr-5" %>
+            </li>
+            <% end %>
+
+    
+            <li class="nav-item">
+            <%= link_to "Show Bugs", bugs_path, class: "nav-link pr-5" %>
+            </li>
+            
+
+            <li class="nav-item">
+            <%= link_to "Logout", logout_path, method: "delete", class: "nav-link pr-5"  %>
+            </li>
+            
+            <% else %>
+
+            <li class="nav-item">
+            <%= link_to "Login", login_path, class: "nav-link pr-5" %>  
+            </li>   
+
+            <% end %>
+        </ul>
+        </div>  
+    </nav>
+</header>

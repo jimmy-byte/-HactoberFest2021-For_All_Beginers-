@@ -1,0 +1,172 @@
+<% provide(:title, "Showing all Bugs") %>
+<!Doctype html>
+<html>
+<head>
+    <title><%= yield(:title) %></title>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-md-offset-3">
+                    <div>
+                        <h2 class="text-center">All Bugs</h2>
+                        <%= will_paginate %>
+                        
+                    <% if current_user.role != 0 %>
+
+                        <% @bugs.each do |bug| %>
+                            
+                            <% if current_user.id == bug.user_id or current_user.name == bug.assigned_to %>
+                                <table class="table  mb-5">
+                                    <tr class="thead-dark">
+                                        <th>Title</th>
+                                        <td class="table-success"><%= bug.title.slice(0).capitalize + bug.title.slice(1..-1) %></td>
+                                    </tr>
+                                    <tr class="thead-dark">
+                                        <th>Description</th>
+                                        <td class="table-success"><%= bug.description %></td>
+                                    </tr>
+                                    <tr class="thead-dark">
+                                        <th>Priority</th>
+                                        <td class="table-success"><%= bug.priority %></td>
+                                    </tr>
+                                    <tr class="thead-dark">
+                                        <th>Est. days to complete</th>
+                                        <td class="table-success"><%= bug.days_to_complete %></td>
+                                    </tr>
+                                    <tr class="thead-dark">
+                                        <th>Status</th>
+                                        <td class="table-success"><%= bug.status %></td>
+                                    </tr>
+                                    <tr class="thead-dark">
+                                        <th>Created by</th>
+                                        <td class="table-success"><%= bug.user.name %></td>
+                                    </tr>
+                                    <tr class="thead-dark">
+                                        <th>Assigned-to</th>
+                                        <td class="table-success"><%= bug.assigned_to %></td>
+                                    </tr>
+                                    <% if current_user.role == 1 or current_user.role == 2 %>
+                                    <tr class="thead-dark">
+                                        <th>Comment</th>
+                                        <td class="table-success"><%= bug.comment %></td>
+                                    </tr>
+                                    <% end %>
+                                    
+                                    <tr>
+                                        <td colspan="2">
+                                            <%= link_to 'Edit Status',edit_bug_path(bug), class: 'btn btn-warning mr-2' %>
+                                            <% if current_user.role == 1 %>
+                                            <%= link_to 'Assign Bug', edit_assign_path(bug), class: 'btn btn-secondary mr-2' %>
+                                            <% end %>
+                                            <% if current_user.role == 2 %>
+                                            <%= link_to 'Add Comment', comment_bug_path(bug), class: 'btn btn-secondary mr-2' %>
+                                            <% end %>
+                                        </td>
+                                    </tr>
+                                    
+                                </table>
+                            
+                          
+
+                    
+                                <% elsif current_user.name == bug.assigned_to %>
+                                <table class="table  mb-5">
+                                    <tr class="thead-dark">
+                                        <th>Title</th>
+                                        <td class="table-success"><%= bug.title.slice(0).capitalize + bug.title.slice(1..-1) %></td>
+                                    </tr>
+                                    <tr class="thead-dark">
+                                        <th>Description</th>
+                                        <td class="table-success"><%= bug.description %></td>
+                                    </tr>
+                                    <tr class="thead-dark">
+                                        <th>Priority</th>
+                                        <td class="table-success"><%= bug.priority %></td>
+                                    </tr>
+                                    <tr class="thead-dark">
+                                        <th>Est. days to complete</th>
+                                        <td class="table-success"><%= bug.days_to_complete %></td>
+                                    </tr>
+                                    <tr class="thead-dark">
+                                        <th>Status</th>
+                                        <td class="table-success"><%= bug.status %></td>
+                                    </tr>
+                                    <tr class="thead-dark">
+                                        <th>Created by</th>
+                                        <td class="table-success"><%= bug.user.name %></td>
+                                    </tr>
+                                    <tr class="thead-dark">
+                                        <th>Assigned to</th>
+                                        <td class="table-success"><%= bug.assigned_to %></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><%= link_to 'Edit Status',edit_bug_path(bug), class: 'btn btn-warning mr-2' %>
+                                        
+                                    </tr>
+                                    
+                                </table>
+                                
+                            <% end %>
+                        <% end %>
+                        
+                       
+
+
+                        <% else %>
+                        <% @bugs.each do |bug| %>
+                            
+                                <table class="table table-bordered  mb-5">
+                                    <tr class="thead-dark">
+                                        <th>Title</th>
+                                        <td class="table-success"><%= bug.title.slice(0).capitalize + bug.title.slice(1..-1) %></td>
+                                    </tr>
+                                    <tr class="thead-dark">
+                                        <th>Description</th>
+                                        <td class="table-success"><%= bug.description %></td>
+                                    </tr>
+                                    <tr class="thead-dark">
+                                        <th>Priority</th>
+                                        <td class="table-success"><%= bug.priority %></td>
+                                    </tr>
+                                    <tr class="thead-dark">
+                                        <th>Est. days to complete</th>
+                                        <td class="table-success"><%= bug.days_to_complete %></td>
+                                    </tr>
+                                    <tr class="thead-dark">
+                                        <th>Status</th>
+                                        <td class="table-success"><%= bug.status %></td>
+                                    </tr>
+                                    <tr class="thead-dark">
+                                        <th>Created by</th>
+                                        <td class="table-success"><%= bug.user.name %></td>
+                                    </tr>
+                                    <tr class="thead-dark">
+                                        <th>Assigned to</th>
+                                        <td class="table-success"><%= bug.assigned_to %></td>
+                                    </tr>
+                                    <tr class="thead-dark">
+                                        <th>Comment</th>
+                                        <td class="table-success"><%= bug.comment %></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><%= link_to 'Edit Status',edit_bug_path(bug), class: 'btn btn-warning mr-2' %>
+                                        <% if current_user.role = 0 %>
+                                        <%= link_to 'Assign Bug', edit_assign_path(bug), class: 'btn btn-secondary' %>
+                                        <%= link_to 'Delete Bug',bug_path(bug), method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-danger' %></td>
+                                        <% end %>
+                                        
+                                    </tr>
+                                </table>
+                            <% end %>
+                          
+                        <% end %>    
+
+                       
+                        <%= will_paginate %>
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

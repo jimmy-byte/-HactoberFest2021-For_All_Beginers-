@@ -1,0 +1,33 @@
+<% provide(:title, "Sign Up") %>
+<!Doctype html>
+<html>
+    <head><title><%= yield(:title) %></title></head>
+    <body>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-md-offset-3">
+                    <h2 class="text-center">Sign Up</h2>
+                    <%= form_with(model: @user, local:true) do |f| %>
+                        <%= render 'shared/error_messages' %>
+                        <%= f.label :name %>
+                        <%= f.text_field :name, class: "form-control mb-2" %>
+
+                        <%= f.label :email %>
+                        <%= f.text_field :email, class: "form-control mb-2" %>
+                        
+                        <%= f.label :select_role %>
+                        <%= f.select(:role, options_for_select([['Manager', 0], ['QA', 1], ['Developer', 2]]), {}, {class: "form-control mb-2"}) %>
+
+                        <%= f.label :password %>    
+                        <%= f.password_field :password, class: "form-control mb-2" %>
+
+                        <%= f.label :password_confirmation, "Confirmation" %>
+                        <%= f.password_field :password_confirmation, class: "form-control mb-2" %>
+
+                        <%= f.submit "Create my account", class: "btn btn-primary form-control mt-3" %>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

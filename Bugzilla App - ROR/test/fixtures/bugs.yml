@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  priority: MyString
+  days_to_complete: 1
+  status: MyString
+  user: one
+
+two:
+  title: MyString
+  description: MyText
+  priority: MyString
+  days_to_complete: 1
+  status: MyString
+  user: two

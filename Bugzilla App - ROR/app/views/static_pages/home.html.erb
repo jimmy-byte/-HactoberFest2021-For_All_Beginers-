@@ -1,0 +1,36 @@
+<% provide(:title, "Home") %>
+<!Doctype html>
+<html>
+<head>
+    <title><%= yield(:title) %></title>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-md-offset-3 jumbotron">
+                    <div>
+                        <% if logged_in? %>
+                        <h2>Hi <%= @user.name %>!</h2>
+                        <% end %>
+                        <h4>Welcome to Bugzilla</h4>
+                        <p>Bugzilla is the Bug Management System</p>
+                        <% if logged_in? %>
+                            <% if current_user.role == 0 %>
+                                <p>Manager Mode!</p>
+                            <% elsif current_user.role == 1 %>
+                                <p>QA Mode!</p>
+                            <% elsif current_user.role == 2 %>
+                                <p>Developer Mode!</p>
+                            <% end %>
+                        <% end %>
+                        <% if !logged_in? %>
+                        <div>
+                            <%= link_to "Sign Up", signup_path, class: "btn btn-lg btn-primary btn_signup" %>
+                        </div>
+                        <% end %>
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

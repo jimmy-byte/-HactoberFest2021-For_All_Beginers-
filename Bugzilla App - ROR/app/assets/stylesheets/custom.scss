@@ -1,0 +1,48 @@
+.custom_jumbotron {
+    display:flex;
+    justify-content: center;
+}
+.margin_top {
+    margin-top: 50px;
+}
+.mt_flash {
+    margin-top: 80px;
+}
+footer {
+    p {
+        text-align: center;
+    }
+}
+
+/* form validation errors */
+#error_explanation {
+    color: red;
+    ul {
+        color: red;
+        margin: 0 0 30px 0;
+    }
+}
+
+/* Bugs */
+.bugs_list {
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid grey;
+    border-radius: 5px;
+    background: #f6f6f6;
+}
+
+@media(max-width: 450px) {
+    .custom_jumbotron{
+        h1 {
+            font-size: 25px;
+        }
+        p {
+            font-size: 15px;
+        }
+        .btn_signup {
+            font-size: 15px;
+            padding: 5px;
+        }
+    }
+}

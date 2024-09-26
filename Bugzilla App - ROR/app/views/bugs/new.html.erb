@@ -1,0 +1,39 @@
+<% if current_user.role == 2 %>
+    <% controller.redirect_to root_path %>
+<% else %>
+<% provide(:title, "Create Bug") %>
+<!Doctype html>
+<html>
+    <head><title><%= yield(:title) %></title></head>
+    <body>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-md-offset-3">
+                    <h2 class="text-center">Create Bug</h2>
+                    <%= form_with(model: @bug, local:true) do |f| %>
+                        <%= render 'shared/bug_error_messages' %>
+                        <%= f.label :title %>
+                        <%= f.text_field :title, class: "form-control mb-2" %>
+
+                        <%= f.label :description %>
+                        <%= f.text_area :description, class: "form-control mb-2" %>
+                        
+                        <%= f.label :priority %>
+                        <%= f.select(:priority, options_for_select([['High', 'High'], ['Medium', 'Medium'], ['Low', 'Low']]), {}, {class: "form-control mb-2"}) %>
+
+                        <%= f.label :estimated_days_to_complete %>    
+                        <%= f.select(:days_to_complete, options_for_select([['1', 1], ['2', 2], ['3', 3], ['4', 4], ['4', 4], ['5', 5]]), {}, {class: "form-control mb-2"}) %>
+
+                        <%= f.label :status %>    
+                        <%= f.select(:status, options_for_select([['Not Started', 'Not Started'], ['Started', 'Started'], ['Fixed', 'Fixed'], ['Not Fixed', 'Not Fixed']]), {}, {class: "form-control mb-2"}) %>
+
+                        
+                        <%= f.submit "Create Bug", class: "btn btn-primary form-control mt-3" %>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+<% end %>
