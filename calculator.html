@@ -1,126 +1,193 @@
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-    <script>
-        function Sup() {
-            var exp = document.calc.textview.value;
-            document.calc.textview.value = exp.substring(0, exp.length - 1);
-        }
-    </script>
-    <style type="text/css">
-    	html,
-body {
-    height: 100%;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('bg.jpg'); 
-    background-position: center;
-    background-size: cover;
-    min-height: 100vh;
-}
-
-h1 {
-	text-align: center;
-	color: #fff;
-	padding-top: 100px;
-	font-size: 42px;
-}
-
-.calc {
-    width: 250px;
-    height: 410px;
-    padding: 10px 20px;
-    border-radius: 4px;
-    border: 5px solid white;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-top: -100px;
-}
-
-.screen {
-    width: 100%;
-    height: 50px;
-    padding: 20px;
-    margin-bottom: 20px;
-    margin-top: 10px;
-    font-size: 20px;
-    background: none;
-    border-radius: 4px;
-    border: 5px solid white;
-    box-sizing: border-box;
-    color: white;
-}
-
-.bn {
-    width: 55px;
-    height: 55px;
-    margin: 2px;
-    padding: 9px;
-    background: none;
-    border-radius: 4px;
-    border: 5px solid white;
-    box-sizing: border-box;
-    color: white;
-    font-size: 20px;
-    outline: none;
-    transition: .5s;
-    cursor: pointer;
-}
-
-.bn:hover {
-    transform: scale(1.08);
-    transition: .5s;
-}
-    </style>
-</head>
-
-<body>
-	<h1>Basic Calculator</h1>
-    <div class="calc">
-        <form name="calc">
-            <input name="textview" type="textview" class="screen">
-        </form>
-        <table>
-            <tr>
-                <td><input type="button" class="bn" value="C" onclick="document.calc.textview.value = ''"></td>
-                <td><input style=" font-size: 18px;" type="button" class="bn" value="Sup" onclick="Sup()"></td>
-                <td><input type="button" class="bn" value="√" onclick="document.calc.textview.value = Math.sqrt(document.calc.textview.value)"></td>
-                <td><input type="button" class="bn" value="/" onclick="document.calc.textview.value += '/'"></td>
-            </tr>
-            <tr>
-                <td><input type="button" class="bn" value="7" onclick="document.calc.textview.value += '7'"></td>
-                <td><input type="button" class="bn" value="8" onclick="document.calc.textview.value += '8'"></td>
-                <td><input type="button" class="bn" value="9" onclick="document.calc.textview.value += '9'"></td>
-                <td><input type="button" class="bn" value="*" onclick="document.calc.textview.value += '*'"></td>
-            </tr>
-            <tr>
-                <td><input type="button" class="bn" value="4" onclick="document.calc.textview.value += '4'"></td>
-                <td><input type="button" class="bn" value="5" onclick="document.calc.textview.value += '5'"></td>
-                <td><input type="button" class="bn" value="6" onclick="document.calc.textview.value += '6'"></td>
-                <td><input type="button" class="bn" value="-" onclick="document.calc.textview.value += '-'"></td>
-            </tr>
-            <tr>
-                <td><input type="button" class="bn" value="1" onclick="document.calc.textview.value += '1'"></td>
-                <td><input type="button" class="bn" value="2" onclick="document.calc.textview.value += '2'"></td>
-                <td><input type="button" class="bn" value="3" onclick="document.calc.textview.value += '3'"></td>
-                <td rowspan="2"><input style=" height: 115px;" type="button" class="bn" value="+" onclick="document.calc.textview.value += '+'"></td>
-            </tr>
-            <tr>
-                <td><input type="button" class="bn" value="0" onclick="document.calc.textview.value += '0'"></td>
-                <td><input type="button" class="bn" value="." onclick="document.calc.textview.value += '.'"></td>
-                <td><input type="button" class="bn" value="=" onclick="document.calc.textview.value = eval(document.calc.textview.value)"></td>
-            </tr>
-        </table>
-    </div>
-</body>
-
-</html>
+<! DOCTYPE html>  
+<html>  
+    <head>  
+    <meta charset="utf-8">  
+    <title>  
+         Calculator using HTML Example  
+    </title>  
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">  
+    <!-- CSS property to create interactive  
+        calculator interface -->  
+    <style>  
+        * {  
+  box-sizing: border-box;  
+  font-family: 'Roboto', sans-serif;  
+}  
+body {  
+  background: black;  
+}  
+.container {  
+  width: auto;  
+  margin: 20px;  
+  color:black;  
+}  
+.calc-body {  
+  width: 275px;  
+  margin: auto;  
+  min-height: 400px;  
+  border: solid 1px #3A4655;  
+  box-shadow: 0 8px 50px -7px black;  
+}  
+.calc-screen {  
+  background: #3A4655;  
+  width: 100%;  
+  height: 150px;  
+  padding: 20px;  
+}  
+.calc-operation {  
+  text-align: right;  
+  color: #727B86;  
+  font-size: 21px;  
+  padding-bottom: 10px;  
+  border-bottom: dotted 1px;  
+}  
+.calc-typed {  
+  margin-top: 20px;  
+  font-size: 45px;  
+  text-align: right;  
+  color: #fff;  
+}  
+.calc-button-row {  
+  width: 100%;  
+  background: #3C4857;  
+}  
+.button {  
+  width: 25%;  
+  background: #425062;  
+  color: #fff;  
+  padding: 20px;  
+  display: inline-block;  
+  font-size: 25px;  
+  text-align: center;  
+  vertical-align: middle;  
+  margin-right: -4px;  
+  border-right: solid 2px #3C4857;  
+  border-bottom: solid 2px #3C4857;  
+  transition: all 0.2s ease-in-out;  
+}  
+.button.l {  
+  color: #AEB3BA;  
+  background: #404D5E;  
+}  
+.button.c {  
+  color: #D95D4E;  
+  background: #404D5E;  
+}  
+.button:hover {  
+  background: #E0B612;  
+  transform: rotate(5deg);  
+}  
+.button.c:hover {  
+  background: #E0B612;  
+  color: #fff;  
+}  
+.button.l:hover {  
+  background: #E0B612;  
+  color: #fff;  
+}  
+.blink-me {  
+  color: #E0B612;  
+}  
+html {  
+  height: 100vh;  
+  display: flex;  
+  align-items: center;  
+  justify-content: center;  
+  background-color: #2d3436;  
+  background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);  
+  font-family: 'Cookie', cursive;  
+}  
+.title:hover {  
+  background: #E0B612;  
+  color: #fff;  
+}  
+.title {  
+margin-bottom: 10px;  
+padding: 5px 0;  
+font-size: 40px;  
+font-weight: bold;  
+text-align: center;  
+color: #AEB3BA;  
+font-family: 'Cookie', cursive;  
+}  
+input[type=button] {  
+  width: 60px;  
+  height: 60px;  
+  float: left;  
+  padding: 0;  
+  margin: 5px;  
+  box-sizing: border-box;  
+  background: #ecedef;  
+  border: none;  
+  font-size: 30px;  
+  line-height: 30px;  
+  border-radius: 50%;  
+  font-weight: 700;  
+  color: #5E5858;  
+  cursor: pointer;    
+}  
+input[type=text] {  
+  width: 270px;  
+  height: 60px;  
+  float: left;  
+  padding: 0;  
+  box-sizing: border-box;  
+  border: none;  
+  background: none;  
+  color: red;  
+  text-align: right;  
+  font-weight: 700;  
+  font-size: 60px;  
+  line-height: 60px;  
+  margin: 0 25px;  
+  }  
+.calculator {  
+  background-color: #c0c0c0;  
+  box-shadow: 0px 0px 0px 10px #666;  
+  border: 5px solid black;  
+  border-radius: 10px;  
+}     
+</style>  
+</head>  
+<body>  
+    <div class="container">  
+  <div class="calc-body">  
+    <div class="calc-screen">  
+      <div class="calc-operation"> 25 + 10 = </div>  
+      <div class="calc-typed"> 35 <span class="blink-me"> _ </span> </div>  
+    </div>  
+    <div class="calc-button-row">  
+      <div class="button c"> C </div>  
+      <div class="button l"> ? </div>  
+      <div class="button l"> % </div>  
+      <div class="button l"> / </div>  
+    </div>  
+    <div class="calc-button-row">  
+      <div class="button"> 7 </div>  
+      <div class="button"> 8 </div>  
+      <div class="button"> 9 </div>  
+      <div class="button l"> x </div>  
+    </div>  
+    <div class="calc-button-row">  
+      <div class="button"> 4 </div>  
+      <div class="button"> 5 </div>  
+      <div class="button"> 6 </div>  
+      <div class="button l"> ? </div>  
+    </div>  
+    <div class="calc-button-row">  
+      <div class="button"> 1 </div>  
+      <div class="button"> 2 </div>  
+      <div class="button"> 3 </div>  
+      <div class="button l"> + </div>  
+    </div>  
+    <div class="calc-button-row">  
+      <div class="button"> . </div>  
+      <div class="button"> 0 </div>  
+      <div class="button">  
+        < </div>  
+          <div class="button l"> = </div>  
+      </div>  
+    </div>  
+  </div>  
+</body>  
+</html>  
