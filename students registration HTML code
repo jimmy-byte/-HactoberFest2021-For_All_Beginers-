@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript" src="validate.js"></script>
+</head>
+<body>
+    <form action="#" name="studentRegistration" onsubmit="return(validate());">
+    <table border="1" width="30%" bgcolor="99FFFF" align="center" cellpadding="3" cellspacing="0">
+        <tr>
+            <td colspan="2"> <center><font><b>Students Registration Form</b></font></center></td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="textname" id="textname" size="30"></td>
+        </tr>
+        <tr>
+            <td>Father Name</td>
+            <td><input type="text" name="fathername" id="fathername" size="30"></td>
+
+        </tr>
+        <tr>
+            <td>Personal Address</td>
+            <td><input type="text" name="personaladdress" id="personaladdress" size="30"></td>
+        </tr>
+        <tr>
+            <td>Sex</td>
+            <td>
+                <input type="radio" name="sex" id="sex" value="male" size="10">Male
+                <input type="radio" name="sex" id="sex" value="female" size="10">Female
+                <input type="radio" name="sex" id="sex" value="other" size="10">Other
+                
+            </td>
+        </tr>
+        <tr>
+            <td>Course</td>
+            <td>
+                <select name="course" id="course">
+                    <option value="-1" selected>Select</option>
+                    <option value="B.Tech">B.Tech</option>
+                    <option value="MCA">MCA</option>
+                </select>
+
+            </td>
+        </tr>
+        <tr>
+            <td>E-mail</td>
+            <td><input type="text" name="email" id="email" size="30"></td>
+        </tr>
+        <tr>
+            <td>DOB</td>
+            <td><input type="date" name="dob" id="dob" size="30"></td>
+
+        </tr>
+        <tr>
+            <td>Mobile No.</td>
+            <td><input type="tel" name="mobileno" id="mobileno" size="12"></td>
+
+        </tr>
+        <tr>
+            <td><input type="reset" value="Reset"></td>
+            <td><input type="submit" value="Submit Form"></td>
+        </tr>
+    </table>
+    </form>
+
+</body>
+</html>
