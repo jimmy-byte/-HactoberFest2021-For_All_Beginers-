@@ -1,0 +1,6 @@
+body{
+    background: linear-gradient(to left,red,blue);
+    letter-spacing: .5em;
+    font: 800 2em 'Abril Fatface', cursive;
+    text-align: center;
+}
