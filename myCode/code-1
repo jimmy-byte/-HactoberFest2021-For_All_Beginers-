@@ -1,0 +1,29 @@
+    <script>
+        function hasil() {
+            var form_nama = document.forms["myForm"] ["formName"].value;
+            var form_nis = document.forms["myForm"] ["formNis"].value;
+            var form_tanggal_lahir = document.forms["myForm"] ["formTanggalLahir"].value;
+            var form_jenis_kelamin = document.forms["myForm"] ["formJenisKelamin"].value;
+
+            if (form_nama == "") {
+                alert('nama wajib di isi!!');
+                return false;
+            }
+            
+            if (form_nis == "") {
+                alert('nis wajin di isi!!');
+                return false;
+            }
+
+            if (form_tanggal_lahir == "") {
+                alert('tanggal lahir wajib diisi !');
+                return false;
+                
+            }
+
+            if (form_jenis_kelamin == ""){
+                alert('jenis kelamin wajib diisi !');
+                return false;
+            }
+        }
+    </script>
