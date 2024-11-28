@@ -39,6 +39,42 @@
       }
       .row.content {height:auto;} 
     }
+    
+    .social-icons li {
+    display: inline-block;
+    margin-bottom: 5px;
+    vertical-align: middle;
+ }
+
+.social-icons a {
+    position: relative;
+    display: block;
+    width: 48px;
+    height: 48px;
+    word-break: break-all;
+ }
+
+.social-icons  span  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 48px;
+    height: 48px;
+    
+ }
+
+.social-icons li:nth-child(2)  span {
+    background-position: -48px 0;
+   
+ }
+
+.social-icons li:nth-child(5) span  {
+    background-position: -48px -48px;
+ }
+
+.social-icons li:nth-child(6) span  {
+    background-position: -96px -48px;
+ }
   </style>
 </head>
 <body>
@@ -94,6 +130,17 @@
 
 <footer class="container-fluid text-center">
   <p>Footer Text</p>
+  
+  <ul class="social-icons">
+    <li><a href="https://www.instagram.com">instagram<span></span><img src="facebook.jpeg"></a></li>
+    <li><a href="https://in.pinterest.com">pinterest<span></span></a></li>
+    <li><a href="https://twitter.com">twitter<span></span></a></li>
+    <li><a href="https://www.facebook.com">facebook<span></span></a></li>
+   </ul>
+
+</div>
+
+<div class='copyright'>@All Rights Reserved</div>
 </footer>
 
 </body>
