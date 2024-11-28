@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>SignUp</title>
+    </head>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap');
+
+*{
+    background: linear-gradient(to right, white , rgb(81, 81, 247));
+}
+
+.container{
+    width: 50%;
+    height: 70%;
+    border: 2px solid black;
+    position: absolute;
+    top: 15%;
+    left: 25%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: white;
+}
+
+.signup-form{
+    display: flex;
+    flex-direction: row;
+    background: white;
+    border-radius: 25px;
+}
+
+.signup-form h1{
+    margin: auto;
+    /* border: 2px solid red; */
+    padding-top: 10px;
+    background: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 50px;
+
+}
+
+form{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    background: white;
+}
+
+form input{
+    padding: 15px;
+    width: 25em;
+    border-radius: 10px;
+    font-size: large;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: 'Oswald', sans-serif;
+}
+
+#button{
+    background: linear-gradient(to right, white, rosybrown);
+    width: 8em;
+    font-size: x-large;
+    cursor: pointer;
+}
+    </style>
+
+    <body>
+        <div class="container">
+            <div class="signup-form">
+                <h1>Sign Up</h1>
+                <form>
+                    <input type="text" value="Name"><br>
+                    <input type="text" value="E-mail"><br>
+                    <input type="password" value="Password"><br><br><br>
+
+                    <input type="submit" value="Submit" id="button"> 
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
