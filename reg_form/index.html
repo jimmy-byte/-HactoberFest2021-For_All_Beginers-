@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="https://fonts.googleapis.com/css2?family=Acme&family=Kufam:wght@500&family=Work+Sans&display=swap" rel="stylesheet">
+	<link rel="icon" href="favicon.png">
+	<title>Registration Form</title>
+
+	<style>
+		body {
+			background-color: #fff685;
+			margin: 50px 50px;
+			font-size: 20px;
+			font-family: 'Work Sans', sans-serif;
+
+		}
+
+		.nit {
+			text-align: center;
+			background-color: #6BF258;
+		}
+
+		h1 {
+			text-align: center;
+			font-family: 'Acme', sans-serif;
+
+
+		}
+
+		h2 {
+			background-color: #66ffcc;
+			text-align: center;
+			font-family: 'Kufam', cursive;
+
+		}
+
+		input,
+		select,
+		textarea {
+			border: solid #7258F2 2px;
+			border-radius: 7px;
+			padding: 12px 20px;
+			font-size: 15px;
+		}
+
+		.btn1 {
+			margin-top: 70px;
+			margin-left: 720px;
+			font-size: 15px;
+			text-align: center;
+			border-radius: 5px;
+		}
+
+		.btn2 {
+      font-size: 15px;
+			text-align: center;
+			border-radius: 5px;
+		}
+
+		::-webkit-scrollbar-track {
+			-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+			border-radius: 10px;
+			background-color: #F5F5F5;
+		}
+
+		::-webkit-scrollbar {
+			width: 12px;
+			background-color: #F5F5F5;
+		}
+
+		::-webkit-scrollbar-thumb {
+			border-radius: 10px;
+			-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .2);
+			background-color: #C844F6;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="nit">
+
+		<h1>Resonance&ensp;Eduventures&ensp;</h1>
+		<p>Educating for better tomorrow</p>
+	</div>
+	<h1><u>Registration</u>&nbsp;<u>Form</u></h1>
+	<div>
+		<h2>BASIC DETAILS</h2>
+		<table cellspacing="12px">
+			<tr>
+				<td>
+					<label for="form-no">Form Number</label>
+				</td>
+				<td>
+					<input type="text" id="form-no" autofocus />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="name">Name</label>
+				</td>
+				<td>
+					<input type="text" name="name" id="name" />
+				</td>
+			</tr>
+			<tr>
+				<td><label for="roll-no">Roll Number</label></td>
+				<td><input type="number" name="roll" id="roll-no" /></td>
+			</tr>
+			<tr>
+				<td>
+					<label for="gender">Gender</label>
+				</td>
+				<td class="gender">
+					<label for="male">Male</label>
+					<input type="radio" name="gender" value="Male" id="male" />
+					<label for="female">Female</label>
+					<input type="radio" name="gender" value="Female" id="female" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="dob">DOB</label>
+				</td>
+				<td>
+					<input type="date" name="DOB" id="dob" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="pwd">PWD</label>
+				</td>
+				<td class="pwd">
+					<label for="yes">YES</label>
+					<input type="radio" name="PWD" id="yes" />
+					<label for="no">NO</label>
+					<input type="radio" name="PWD" id="no" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="category">Category</label>
+				</td>
+				<td>
+					<select name="category" id="category">
+						<option value="General">General</option>
+						<option value="General EWS">General-EWS</option>
+						<option value="OBC">OBC</option>
+						<option value="SC">SC</option>
+						<option value="ST">ST</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="Address">Address</label><br /></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<textarea id="Address" cols="60" rows="10"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="pincode">PIN Code</label></td>
+				<td><input type="number" id="pincode" /></td>
+			</tr>
+			<tr>
+				<td><label for="mob">Student Contact Number</label></td>
+				<td><input type="number" id="mob" /></td>
+			</tr>
+			<tr>
+				<td><label for="mob1">Guardian Contact Number</label></td>
+				<td><input type="number" id="mob1" /></td>
+			</tr>
+		</table>
+	</div>
+	<br /><br />
+	<div>
+		<h2>ACADEMIC INFORMATION</h2>
+		<table cellspacing="12px">
+			<tr>
+				<td><label for="course">Course</label></td>
+				<td>
+					<select id="course">
+						<option value="WISDOM">WISDOM</option>
+						<option value="WINNER">WINNER</option>
+						<option value="VIKAAS">VIKAAS </option>
+						<option value="VIJETA">VIJETA</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="branch">Branch</label></td>
+				<td><input type="text" id="branch" /></td>
+			</tr>
+			<tr>
+				<td><label for="sem">Semester</label></td>
+				<td>
+					<input type="number" id="sem" />
+				</td>
+			</tr>
+			<tr>
+				<td><label for="air">All India Rank</label></td>
+				<td><input type="number" id="air" /></td>
+			</tr>
+			<tr>
+				<td><label for="cat">Category Rank</label></td>
+				<td><input type="number" id="cat" /></td>
+			</tr>
+			<tr>
+				<td><label for="cgpa">CGPA</label></td>
+				<td><input type="number" id="cgpa" /></td>
+			</tr>
+			<tr>
+				<td>
+					<label for="backlog">Backlog(if any)</label>
+				</td>
+				<td class="backlog">
+					<label for="yes">YES</label>
+					<input type="radio" name="back" id="yes" />
+					<label for="no">NO</label>
+					<input type="radio" id="no" name="back" />
+				</td>
+			</tr>
+		</table>
+		<h2>HOSTEL DETAILS</h2>
+		<table cellspacing="12px">
+			<tr>
+				<td>
+					<label for="account">Hostel Accomodation</label>
+				</td>
+				<td class="acc">
+					<label for="yes">YES</label>
+					<input type="radio" name="account" id="yes" />
+					<label for="no">NO</label>
+					<input type="radio" name="account" id="no" />
+				</td>
+			</tr>
+			<tr>
+				<td><label for="hostel">Name of Hostel</label></td>
+				<td><input type="text" id="hostel" /></td>
+			</tr>
+			<tr>
+				<td><label for="room-no">Room Number</label></td>
+				<td><input type="text" id="room-no" /></td>
+			</tr>
+		</table>
+	</div>
+	<br />
+	<div>
+		<h2>ACCOUNT DETAILS FOR REFUNDING PROCESS</h2>
+		<table cellspacing="12px">
+			<tr>
+				<td><label for="acc-hname">Account Holder Name</label></td>
+				<td><input type="text" id="acc-hname" /></td>
+			</tr>
+			<tr>
+				<td><label for="acc-no">Account Number</label></td>
+				<td><input type="number" id="acc-no" /></td>
+			</tr>
+			<tr>
+				<td><label for="ifsc">IFSC Code</label></td>
+				<td><input type="text" id="ifsc" /></td>
+			</tr>
+			<tr>
+				<td><label for="bank-name">Bank Name</label></td>
+				<td><input type="text" id="bank-name" /></td>
+			</tr>
+			<tr>
+				<td><label for="bank-branch">Bank Branch</label></td>
+				<td><input type="text" id="bank-branch" /></td>
+			</tr>
+		</table>
+	</div>
+	<div>
+		<h2>TERMS AND CONDITIONS</h2>
+		<table cellspacing="12px">
+			<tr>
+				<td><input type="checkbox" name="cond1"></td>
+				<td> <label for="cond1">I certify that the information submitted in this application is true and correct to the best of my knowledge.</label></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="cond2"></td>
+				<td><label for="cond2">I undertake that all the documents provided are in original.</label></td>
+			</tr>
+		</table>
+
+	</div>
+
+	<button style="background-color:#51F24E" type="submit" name="button" class="btn1">SUBMIT</button>
+	<button style="background-color:coral" type="reset" name="button" class="btn2">RESET</button>
+	</form>
+
+</body>
+
+</html>
