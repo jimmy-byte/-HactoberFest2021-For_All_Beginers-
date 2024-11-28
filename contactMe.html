@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Contact Me Page</title>
+
+    <style>
+    body{
+  background-color: #47B5FF;
+}
+
+h1{
+  color: white;
+  text-align: center;
+}
+h2{
+  color: #424874;
+}
+    .container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin:auto;
+  width: 50%;
+
+}
+input[type=text]{
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin:auto;
+  resize: vertical;
+}
+input[type=submit]{
+  width: 15%;
+  padding: 9px;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin:auto;
+  resize: vertical;
+  background-color: #DFF6FF;
+}
+input[type=email]{
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin:auto;
+  resize: vertical;
+}
+textarea{
+  width: 90%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin:auto;
+  resize: vertical;
+}
+    </style>
+  </head>
+  <body>
+<h1>CONTACT ME PAGE</h1>
+    <div class="container">
+<h3>My Contact Details :</h3>
+    <table cellspacing="20">
+      <tr>
+        <td><strong>Email:</strong></td>
+        <td>_@gmail.com</td>
+      </tr>
+      <tr>
+        <td><strong>Phone No.:</strong></td>
+        <td>900XXXXXXX</td>
+      </tr>
+    </table>
+    <hr>
+    <h3>If you wish to contact Me :</h3>
+    <form action="mailto:_@gmail.com?subject=Connect" method="post" enctype="text/plain">
+      <label>Your Name: </label>
+        <input type="text" name="" value="">
+      <br>
+      <br>
+      <label>Your Email: </label>
+
+      <input type="email" name="" value="">
+      <br>
+      <br>
+      <textarea name="your message" rows="8" cols="80">Type message here</textarea>
+      <br>
+      <br>
+      <input type="submit" name="" value="Submit">
+      <br>
+      <br>
+      <label>Do you want to sign in to the newsletter?</label>
+      <input type="checkbox" name="" value="">
+    </form>
+    </div>
+  </body>
+</html>
