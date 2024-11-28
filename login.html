@@ -1,7 +1,72 @@
 <html>
 <head>
 <title>Javascript Login Form Validation</title>
-<!-- Include CSS File Here -->
+<style>
+    *{
+        box-sizing: border-box;
+        list-style: none;
+    }
+    body{
+        background-color: rgb(192, 243, 243);
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
+    }
+    .main{
+        background-color:bisque;
+        border: 1px solid rgb(240, 147, 34);
+        margin-top:30px;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px rgb(0,0,0,0.3);
+    }
+    .container .main h2{
+        text-transform:uppercase;
+        text-align: center;
+        letter-spacing: 3px;
+        margin-top: 10px;
+        margin-bottom: 60px;
+    }
+    .heading{
+        text-shadow: 2px 2px 2px rgb(0,0,0,0.3);
+        color: blue;
+    }
+    label{
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 200;
+        font-family: sans-serif;
+        font-weight: bold;
+    }
+    input[type="text"],input[type="password"]{
+        width: 100%;
+        border: 1px solid grey;
+        padding: 8px;
+        border-radius: 5px;
+        background-color: aliceblue;
+        margin: 10px;
+    }
+    input[type="button"]{
+        font-style: normal;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size:20px;
+        padding: 8px;
+        border-radius: 8px;
+        border: white;
+        color: aliceblue;
+        background-color: rgb(75, 130, 250);
+        cursor: pointer;
+    }
+    input[type="button"]:hover{
+        background-color: aliceblue;
+        color: rgb(75, 130, 250);
+    }
+    #submit{
+        box-shadow: 3px 5px 5px rgb(0,0,0,0.3);
+    }
+</style>
 <link rel="stylesheet" href="css/style.css"/>
 <!-- Include JS File Here -->
 <script src="js/login.js"></script>
@@ -9,12 +74,12 @@
 <body>
 <div class="container">
 <div class="main">
-<h2>Javascript Login Form Validation</h2>
+<h2><span class="heading">Javascript Login Form Validation</span></h2>
 <form id="form_id" method="post" name="myform">
 <label>User Name :</label>
-<input type="text" name="username" id="username"/>
+<input type="text" name="username" placeholder="Enter name" id="username"><br><br><br>
 <label>Password :</label>
-<input type="password" name="password" id="password"/>
+<input type="password" name="password" placeholder="Enter password" id="password"><br><br>
 <input type="button" value="Login" id="submit" onclick="validate()"/>
 </form>
 <span><b class="note">Note : </b>For this demo use following username and password. <br/><b class="valid">User Name : Formget<br/>Password : formget#123</b></span>
